@@ -1,265 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="about Farzad Rabiei">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Farzad Hompage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="styleMySite.css" />
+		<script src="main.js"></script>
+		<style> 
+			body, html {
+				padding: 0;
+				margin: 0;
+			}
+			html {
+				background-color: #fafafa;
+				font-family: "Helvetica Neue", Helvetica,Arial, sans-serif;
+				padding-top: 50px;
+			}
+			a {
+				color: #222;
+			}
+			#main-header {
+				background-color: #ffffff; 
+				padding: 5px;
+				box-shadow: 0 4px 2px -2px rgba(0,0,0,.05); 
+				position: fixed; 
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 5;
+			}
+			#main-header h1 {
+				font-size: 20px;
+				margin: 0;
+				float: left;
+				margin-right: 20px; 
+				padding: 5px;
+			}
+			#main-header nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			#main-header nav ul li {
+				float: left;
+				margin-left: 20px;
+			}
+			#main-header nav ul li a {
+				padding: 10px;
+				display: block; 
+				text-decoration: none;
+				border: 1px solid transparent; 
+			}
+			#main-header nav ul li a:hover {
+				background:#f7f7f7; 
+				border: 1px solid #e1e1e1;
+				border-radius: 5px;
+			}
+			.clearfix:after {
+				visibility: hidden;
+				display: block;
+				font-size: 0;
+				content: " ";
+				clear: both;
+				height: 0;
+			}
+			#featured-article {
+			} 
+			#featured-article h2, #featured-article h3 {
+				margin: 5px 0;
+			}
+			#featured-article figure {
+				float: left; 
+				margin: 0;
+				margin-right: 20px;
+			}
+			#featured-article figure img {
+				width: 140px;
+			} 
+			#featured-article p {
+				overflow: hidden;
+			} 
+			.container {
+				width: 960px;
+				margin: 0 auto;
+			} 
+			.card {
+				background: #fff;
+				padding: 15px;
+				border-radius: 5px; 
+				border: 1px solid #e1e1e1;
+				margin-top: 20px;
+			} 
+			.post-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+			.post-list article {
+				position: relative;
+				padding-left: 200px;
+			}
+			.post-list article footer {
+				position: absolute;
+				left: 0;
+				top: 5px;
+				width: 200px;
+			}
+			.post-list figure img {
+				max-width: 100%;
+			}
+			.post-list figure figcaption {
+				/* text-align: center;
+				be nazaram tanha vaghti bedard 
+				mikhorad ke aks bozorg bashad ,magar
+			 	inke center boodan an be aks marboot shavad */
+				font-weight: bold;	
+			} 
+			.post-list time {
+				color: #888;
+				padding-bottom: 10px;
+				display: block;
+			}
+			.post-list li {
+				border-bottom: 1px solid #e1e1e1;
+				margin-bottom: 25px;
+				padding-bottom: 25px;
+			}
+			.post-list li:last-child {
+				border-bottom: 0;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			#footer-links {
+				margin-top: 40px;
+				background: #fff;
+				border-top: 1px solid #e1e1e1;
+				border-bottom: 1px solid #e1e1e1;
+				padding: 20px 0;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Prsonal website">
-    <meta name="keywords" content="Farzad Rabbye, Fullstack developer, Frontend developer">
-    <meta name="author" content="Farzad Rabbye">
-    <title>Farzad Rabby-e</title>
-    <link rel="shortcut icon" type="image/x-icon" href="Data-folder/logo.png" />
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/skill.css">
-    <link rel="stylesheet" href="./css/timeline.css">
-    <link rel="stylesheet" href="./css/contact.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/9214c5ebfe.js"></script>
-</head>
+			}
+			#footer-links .colum {
+				width: 50%;
+				float: left;
+			}
+			#footer-links ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			#footer-links ul li {
+				padding: 5px 10px;
+				margin: 0;
+				list-style: none;
+			}
+			#footer-links h3 {
+				margin: 5px 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #e1e1e1;
+			}
+			#footer-links a {
+				color: #111;
+				text-decoration: none;
+			}
+			.social-link[rel="external"] {
+				
+			}
+			.social-link {
+				background: left center no-repeat;
+				padding-left: 24px;
+			}
+			.social-link.twitter {
+				background-image: url(images/twitterLogo.png);
+                background-size: 50px;
+			}
+			.social-link.facebook {
+				background-image: url(images/facebook_logo.png);
+				padding-left: 24px;
+			}
+			.social-link.instagram {
+				background-image: url(images/instagram_logo.png);
+				padding-left: 24px;
+			}
+			body > footer {
+				padding: 19px 0;
+			}
+			body > footer span {
+				float: left;
+				margin-right: 20px;
+			}
+			body > footer ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			body > footer ul li {
+				float: left;
+				margin-right: 10px;
+			}
+			body > footer ul li::after {
+				content: "_";
+				margin-left: 10px;
+				color: #888;
+			}
+			body > footer ul li:last-child::after {
+				content: "";
+			}
 
-<body>
-    <nav class="navbar container sticky-top  blue navbar-expand-lg ">
-        <button class="navbar-toggler nav-fix blue" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon blue "><i class="fas fa-bars"></i></span>
-        </button>
-        <div class="collapse navbar-collapse nav-fix" id="navbarNavDropdown">
-            <ul class="navbar-nav blue" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <li class="nav-item ">
-                    <a class="nav-link blue" href="#home"> Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link blue" href="#about"> About me </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link blue" href="#skills"> Skills </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link blue" href="#timeline"> Timeline </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link blue" href="#contact"> Contact </a>
-                </li>
+		</style>
+	</head> 
+	<body>
+		<header id="main-header" class="clearfix">
+			<div class="container">
+				<h1>Farzad Homepage</h1>
+				<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="about.html">About Us</a></li>
+				</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+		<aside id="featured-article" class="clearfix card">
+			<figure>
+				<img src="images/farzad_Baby_1.jpg" alt="Baby Farzad">
+			</figure>
+			<header>
+				<h2>Featured Article</h2>
+				<h3><a href="featured.html">Baby Farzad Picture</a></h3>
+			</header>
+			<p>
+				zjkfnl kjnk erjj jk njlkjjk jknlkjnl njr jk jjljkn oir jh 
+				lkeruh ul weuu lewrys uerl iuueyr krhf ruoyrfqi uouiui oi
+				uluuoil uiloui uiyloyu lwe qluw luoiwl lqyluy qwleo oyu8 ouiyo 
+				uyliu liuyuoiy lwe loweiu loeyu olqwoy olweiy tydhyt ytdht6 
+				dt7j hjtd7jh jt rj jj6y7 jty7j 67rjk68 rk68k k886k7k.
+			</p>
+			</aside>
+			<main class="card">
+			 	<ol class="post-list">
+		 			<li>
+		 				<article>
+		 					<header>
+		 						<footer>
+		 							<time datetime="2017-06-12T23:00+1:00">
+		 							June 12, 2017 - 11:00pm</time>
+		 							<address>
+		 							By <a href="Frazad.html">Farzad Rabiei</a>
+		 							</address>
+		 						</footer>
+		 						<h2>
+		 							<a href="post.html">c jgergjhwegxasxajwheed
+		 							jrkrhgfekhrf hrkjjcwkejkjjw herfr</a>
+		 						</h2>
+		 					</header>
+		 					<div>
+		 						<p>
+		 							hhfgke rfgskchs kchhfhhs gghscjhgfgf fgasjghcf
+		 							aefhgejcgajkgcage fjegjkhae gjaegh djhegeejh
+		 							agefg gaejkdghajgd fdHGAFDEYGE FDGEFJGASF
+		 							Gh JEASG DJGWEDGJKEHF JASDG CJhagdjkHGJg
+		 							awjeghfkj aweh gfkajshdvbasdjv ejhgfjkg
+		 							fhawrkjhcgasjk hfgwefgk cfbaskcdb,akhgbfwb
+		 							asvbhjrh bvksjebvkaj bfkajfh, kawjbcv,ka
+		 							,asbvkar jbvkwjbvk awejcvakjb vakjbvwejkvk
+		 							jlrhblrvlnvlnrvl 
+		 						</p>
+		 					</div>
+		 				</article>
+		 			</li>
+		 			<li>
+		 				<article>
+		 					<header>
+		 					<footer>
+		 						<time datetime="2017-06-12T23:00+1:00">
+		 							June 12, 2017 - 11:00pm
+		 						</time>
+		 						<address>
+		 							By <a href="Frazad.html">Farzad Rabiei</a>
+		 						</address>
+		 					</footer>
+		 					<h2>
+		 						<a href="post1.html">cjgergjh wegx asxajwheed
+		 						jrkrh jwherfr</a>
+		 					</h2>
+		 					</header>
+		 					<div>
+		 						<p>
+		 							hhfgke rfgskchsk chhfhhs gghscjhgfgff gasjghcf
+		 							aefhgej cgajkgcagefj egjkhae gjaeghd jhegeejh
+		 							agefgga ejkdghajgda fdHGAFD EYGEF DGEFJGASF
+		 							GJEASGDJ GWEDG JKEHFGJA SDGCJhag djkHGJg
+		 							awjeghfkjawehgfkaj shdvbasdjve jhgfjkg
+		 							fhawr jhcga sjkhfgwefgk cfbaskcdb,akhgbfwb
+		 							asvbhjrh bvksjebv kajbfkajfh,k awjbcv,ka
+		 							,asbvkar jj bvkwjbv kawejcv akjbvakjbvwejkvk
+		 							jlrhblrvl nvlnrvl
+		 						</p>
+		 						<figure>
+		 							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKcTsr1wPa1oNhsJEJr-zZ0GpQdQp1HSFtUR93T1-WE9zelATJpw" alt="Baby paniz" />
+		 							<figcaption>Fight picture</figcaption>
+		 						</figure>
+		 						<p>
+		 						awje ghfkj awehgfk ajshdvbasdj ve jhgfjkg
+		 						fhawrkjhc gasjkhfg wefgkc fbaskcdb,akhgbfwb
+		 						asvbh jrhbvk sjebvk ajbfkajfh,ka wjbcv,ka
+		 						,asbvkar jbvk wjbvkawejc vakjb vakjbvwejkvk
+		 						jlrhbl rvln vlnrvl
+		 						</p>
+							 </div>
+							 <details>
+								 <summary>
+									 Click here to see more
+								 </summary>
+								 <p>
+									hhfgke rfgskchsk chhfhhs gghscjhgfgff gasjghcf
+									aefhgej cgajkgcagefj egjkhae gjaeghd jhegeejh
+									agefgga ejkdghajgda fdHGAFD EYGEF DGEFJGASF
+									GJEASGDJ GWEDG JKEHFGJA SDGCJhag djkHGJg
+									awjeghfkjawehgfkaj shdvbasdjve jhgfjkg
+									fhawr jhcga sjkhfgwefgk cfbaskcdb,akhgbfwb
+									asvbhjrh bvksjebv kajbfkajfh,k awjbcv,ka
+									,asbvkar jj bvkwjbv kawejcv akjbvakjbvwejkvk
+									jlrhblrvl nvlnrvl
+								 </p>
+							 </details>
+		 				</article>
+		 			</li>
+		 			<li>
+		 				<article>
+		 					<header>
+		 						<footer>
+		 							<time datetime="2017-06-12T23:00+1:00">
+		 							June 12, 2017 - 11:00pm</time>
+		 							<address>
+		 							By <a href="Frazad.html">Farzad Rabiei</a>
+		 							</address>
+		 						</footer>
+		 						<h2>
+		 							<a href="post2.html">cjgergj hwegxa sxajwheed
+		 							jrkrhgfekhr fhrkjjcwk ejknsfkrkgfvs
+		 							m.lklkn lnj lkjjwherfr</a>
+		 						</h2> 
+		 					</header>
+		 					<div>
+		 						<p>
+		 							hhfgk erfgskch skchh fhhsg hscjhgfg ffgasjghcf
+		 							aefhg ejcgaj kgcag efjegjkha egjaeghd jhegeejh
+		 							agefggaej kdghajgda fdHGA FDE YGEFD GEFJGASF
+		 							GJEA SG DJG WED GJKEHF GJASDGCJ hagdj kHGJg
+		 							awjeghfkj awehgf kajs hdvbas djvejhgfjkg
+		 							fhawrkj hcgasjkhfg wefgkcf baskcdb, akhgbfwb
+		 							asvbhj rhbvksje bvkajbf kajfh,ka wjbcv,ka
+		 							,asbvka rjbvkwj bvkawejcv akjbvakjbvwejkvk
+		 							jlrhblrvl vlnrvl
+		 						</p>
+		 					</div>
+		 				</article>
+		 			</li>
+		 		</ol>
+			 </main>
+			</div>
+			 	<section id="footer-links" class="clearfix">
+					<div class="container">
+		 				<div class="colum">
+		 					<h3>
+		 						Browse
+		 					</h3>
+		 					<ul>
+		 					<li><a href="#">khbrim6yvipsu rmzsm nkwfkucvyiuyr nkgcclh 5rg</a></li>
+		 					<li><a href="#">khbrim6y vipsurfg njhykmz smnkwfk ucvyiuy rnkgcclh5rg</a></li>
+		 					<li><a href="#">khbrim6yv ipsur
+		 					mzsnbdfvjj k mmnkwf.,kucvy iuyrnkgc clh5rg</a></li>
+		 					</ul>
+		 				</div>
+		 				<div class="colum">
+		 				<h3>Social</h3>
+		 				<ul>
+							<li><a class="social-link twitter"
+								rel="external" href="#">Twitter</a>
+							</li>
+							<li><a class="social-link instagram" 
+								rel="external" href="#">Instagram</a>
+							</li>
+							<li><a class="social-link facebook"
+								rel="external" href="#">Facebook</a>
+							</li>
+		 				</ul>
+						</div>
+					</div>
+		 		</section>
+		 		<footer class="clearfix">
+					<div class="container">
+		 			<span>&copy; Farzad Rabiei 2018</span>
+		 			<ul>
+		 				<li><a href="privacy.html">Privacy policy</a></li>
+		 				<li><a href="terms.html">Terms of Service</a></li>
+		 				<li><a href="mailto:f.rabiei1983@gmail.com">Support</a></li>
+		 			</ul>
+					</div>  	
+		 		</footer>
 
-            </ul>
-        </div>
-    </nav>
-    <div class="main">
-
-        <button onclick="topFunction()" id="myBtn" title="Go to top"><a href="#" class="upBtn">
-                <i class="fa fa-chevron-up"></i></a>
-        </button>
-        <!-- main container -->
-        <div class="background">
-            <!-- background color -->
-            <div class="colorhead" id="home">
-            </div>
-        </div>
-        <div class="container cont col-10">
-            <span></span>
-            <br>
-            <div class="s1">
-                <div class="camper">
-                    <div class="filer"></div>
-                    <div class="img-p">
-                    </div>
-                    <div class="t-holder">
-                        <h1><span>I am </span>Farzad Rabiei</h1>
-                        <h5>FullStack Web Developer</h5>
-                        <br>
-                        <h4>
-                            <a href="https://www.xing.com/profile/Farzad_Rabbye/cv"><i
-                                    class="fab fa-xing white"></i></a>
-                            <a href="https://www.linkedin.com/in/farzad-rabiee-775876149/"><i
-                                    class="fab fa-linkedin-in white "></i></a>
-                            <a href="https://github.com/farzadRabbyE"><i class="fab fa-github white"></i></a>
-
-                        </h4>
-                        <a class="btn btn-lg btn blue " download="Farzad_Rabiei_cv" href="./Data-folder/CV.pdf">
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-                <div>
-                </div>
-            </div>
-            <span id="about"></span>
-            <br>
-            <div class="s2" id="about">
-                <div class="row">
-                    <div class="about col-md-6">
-                        <div class="container">
-                            <h3> About</h3>
-                            <p> <span>Hi, I am Farzad Rabiei</span><br>I chose to change my field of work because of my
-                                interest in programming. In 2019, I completed an eight-month full-time Web Developer
-                                course at DCI. I am currently learning more about web development.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="basic-i col-md-6">
-                        <div class="col-md-12 col-md-offset1">
-                            <h3> Basic Information </h3>
-                            <ul class="list-group col-12">
-                                <li class=" col-12 ">
-                                    <h6 class="f-l col-4"> Mobile:</h6>
-                                    <h6 class="f-l col-8"> 004915901307384</h6>
-                                </li>
-                                <li class=" col-12 ">
-                                    <h6 class="f-l col-4"> Mail:</h6>
-                                    <h6 class="f-l col-8">f.rabiei1983@gmail.com</h6>
-                                </li>
-                                <li class=" col-12 ">
-                                    <h6 class="f-l col-4"> Address:</h6>
-                                    <h6 class="f-l col-8"> 25421, Pinneberg</h6>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <span id="skills"></span>
-            <div class="s3">
-                <div id="skills" class="active-section">
-                    <div class="section-block skill-section">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="skill-content">
-                                    <h4 class="title">Skills</h4>
-
-                                    <h6> HTML5 & CSS3 </h6>
-                                    <div class="skillbar clearfix " data-percent="80%">
-                                        <div class="skillbar-bar" style="width: 90%;"></div>
-                                        <div class="badge badge-secondery badge-pill">90%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                    <h6> javaScript & jQuery </h6>
-                                    <div class="skillbar clearfix " data-percent="70%">
-                                        <div class="skillbar-bar" style="width: 80%;"></div>
-                                        <div class="badge badge-secondery badge-pill">80%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                    <h6> Bootstrap </h6>
-                                    <div class="skillbar clearfix " data-percent="60%">
-                                        <div class="skillbar-bar" style="width: 70%;"></div>
-                                        <div class="badge badge-secondery badge-pill">70%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                    <h6>Node.js & Express.js</h6>
-                                    <div class="skillbar clearfix " data-percent="60%">
-                                        <div class="skillbar-bar" style="width: 70%;"></div>
-                                        <div class="badge badge-secondery badge-pill">70%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                    <h6>React.js</h6>
-                                    <div class="skillbar clearfix " data-percent="50%">
-                                        <div class="skillbar-bar" style="width: 50%;"></div>
-                                        <div class="badge badge-secondery badge-pill">50%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                    <h6>mongoDB & mySQL</h6>
-                                    <div class="skillbar clearfix " data-percent="30%">
-                                        <div class="skillbar-bar" style="width: 30%;"></div>
-                                        <div class="badge badge-secondery badge-pill">50%</div>
-                                    </div> <!-- End Skill Bar -->
-
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-
-                                <img class="img-f" src="./Data-folder/_photo_back123.png" alt="Skill image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <span id="timeline"></span>
-            <div class="s4">
-                <div class="timeline">
-                    <div class="container-h left">
-                        <div class="content">
-                            <p class="deactiv">(Training)</p>
-                            <h4>March 2018 - October 2019 + 1 month</h2>
-                                <h6>DCI (Digital Career Institute)</h3>
-                                    <p>full time training in fullstack Web Development to update my knowledge</p>
-                        </div>
-                    </div>
-                    <div class="container-h right">
-                        <div class="content">
-                            <p class="deactiv">(Professional Career)</p>
-                            <h4> 2012 - 2015</h2>
-                                <h5>CEO</h5>
-                                <p>SFS Engineering Company
-                                </p>
-                        </div>
-                    </div>
-                    <div class="container-h left">
-                        <div class="content">
-                            <p class="deactiv">(Electronics)</p>
-                            <h4>2009 - 2012</h2>
-                                <h6>Electronics Engineer</h3>
-                                    <h5>Working as Electronics Engineer at KAYSON INC</h5>
-
-                        </div>
-                    </div>
-
-                    <div class="container-h right">
-                        <div class="content">
-                            <p class="deactiv">(Academic History)</p>
-                            <h4> Sep 2004 - Jul 2009 </h2>
-                                <h6> Free University of Naein </h3>
-                                    <p>BS Electronics Engineering</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <span id="contact"></span>
-            <div class="s5">
-                <div class="fix-cont col-10">
-                    <div>
-                        <h4 class="title">Want to chat?<br>
-                            Contact me here!</h4>
-                        <br>
-                        <h5 id="ms-box" class="ms-box1"></h5>
-                        <form class="contact-forms" id="cf" action="https://mail.google.com/mail/u/1/">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" required class="form-control" id="f-n" placeholder="Name *">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" required class="form-control" id="f-e"
-                                            placeholder="Email *">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" required class="form-control" id="f-p" placeholder="Phone *">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <textarea class="form-control" required rows="6" id="f-m"
-                                        placeholder="What's on your mind? Chances are, I'll get back to you soon after I receive this message. Make it interesting, or keep it all business. Makes no difference to me."></textarea>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="contact-btn">
-                            <a class="btn btn-primary blue " href="javascript:email()" role="button">Send</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</body>
-<script src="./js/main.js"></script>
-
+	</body>
 </html>
